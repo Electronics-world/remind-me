@@ -1,0 +1,35 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "logs2": "heroku logs -n 2000 -a steemind-me > logs",
+    "logs": "heroku logs -t -a steemind-me",
+    "h:stop": "heroku ps:scale web=0 -a steemind-me",
+    "h:start": "heroku ps:scale web=1 -a steemind-me",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adasq/playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adasq/playground/issues"
+  },
+  "homepage": "https://github.com/adasq/playground#readme",
+  "dependencies": {
+    "better-queue": "^3.8.7",
+    "chrono-node": "1.3.5",
+    "express": "4.16.3",
+    "lodash": "4.17.5",
+    "moment": "2.22.0",
+    "nconf": "0.10.0",
+    "request": "2.85.0",
+    "rpc-websockets": "4.0.2",
+    "steem": "0.7.1",
+    "uuid": "3.2.1"
+  }
+}
